@@ -14,9 +14,9 @@ The bare field names below are canonical. The compliant long form carries the
 accepts a runeADR record.
 
 Upstream ships more than the specification: a JSON Schema, record templates, and a
-GitHub Action validator for CI. The schema is vendored under `vendor/` with its MIT
-license. The upstream [SPECIFICATION](https://github.com/zircote/structured-madr/blob/main/SPECIFICATION.md)
+GitHub Action validator for CI. The upstream [SPECIFICATION](https://github.com/zircote/structured-madr/blob/main/SPECIFICATION.md)
 also defines risk-assessment and audit sections, which runeADR treats as optional.
+runeADR carries its own JSON Schema for the field set below.
 
 ## Frontmatter
 
@@ -60,8 +60,9 @@ is quoted.
   variable.
 - `adr.mdschema`: the structural validation schema. Copy it into your decisions
   directory as `.mdschema`.
-- `vendor/structured-madr.schema.json`: the upstream JSON Schema, for CI that
-  validates frontmatter as data.
+- `runeadr.schema.json`: the JSON Schema, for CI that validates frontmatter as
+  data. Bare fields are canonical, and `x-rune-` prefixed fields pass for
+  compliance with strict structured-madr validators.
 
 ## Naming
 
@@ -71,5 +72,4 @@ one decision, one series.
 
 ## License
 
-EUPL-1.2. See `LICENSE`. The vendored upstream schema stays MIT, see
-`vendor/LICENSE-structured-madr`.
+EUPL-1.2. See `LICENSE`.
