@@ -1,0 +1,7 @@
+# Template files align end-of-line %% comments with spacing, so the
+# consecutive-space rule stays off. Lines wrap at 120 elsewhere.
+[global]
+disable = ["MD064", "MD025", "MD041"]
+
+[MD013]
+line_length = 120
