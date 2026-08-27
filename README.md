@@ -6,15 +6,15 @@ validates both.
 
 ## Lineage
 
-runeADR extends [structured-madr](https://github.com/zircote/structured-madr) with
-accountability and provenance fields.
+runeADR extends [Structured MADR](https://github.com/modeled-information-format/structured-madr) with
+accountability and provenance fields. The format documentation lives at [smadr.dev](https://smadr.dev).
 
 The bare field names below are canonical. The compliant long form carries the
-`x-rune-` prefix (`x-rune-accountable`), so a strict structured-madr validator
+`x-rune-` prefix (`x-rune-accountable`), so a strict Structured MADR validator
 accepts a runeADR record.
 
 Upstream ships more than the specification: a JSON Schema, record templates, and a
-GitHub Action validator for CI. The upstream [SPECIFICATION](https://github.com/zircote/structured-madr/blob/main/SPECIFICATION.md)
+GitHub Action validator for CI. The upstream [SPECIFICATION](https://github.com/modeled-information-format/structured-madr/blob/main/SPECIFICATION.md)
 also defines risk-assessment and audit sections, which runeADR treats as optional.
 runeADR carries its own JSON Schema for the field set below.
 
@@ -62,7 +62,7 @@ is quoted.
   directory as `.mdschema`.
 - `runeadr.schema.json`: the JSON Schema, for CI that validates frontmatter as
   data. Bare fields are canonical, and `x-rune-` prefixed fields pass for
-  compliance with strict structured-madr validators.
+  compliance with strict Structured MADR validators.
 
 ## Naming
 
